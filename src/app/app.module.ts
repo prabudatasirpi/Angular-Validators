@@ -3,19 +3,19 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { Router, RouterModule } from '@angular/router';
-import { ValidatorsComponent } from './validators/validators.component';
+import { RegisterformComponent } from './registerform/registerform.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ValidatorsComponent,
+    RegisterformComponent,
 
   
   ],
   imports: [
     BrowserModule,
     RouterModule,
-    FormsModule,
+    FormsModule,  
     ReactiveFormsModule,
 
     

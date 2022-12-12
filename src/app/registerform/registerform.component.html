@@ -1,0 +1,50 @@
+<div id="parent" class="container mt-5 content">
+
+
+    <form id="registerationValidationForm" class="content" [formGroup]="registerForm" (ngSubmit)="submitData()">
+        <h3 class="text-center"> Register Form</h3>
+        <div class="row">
+
+            <div class="mt-2 mb-2 col-lg-6 col-6">
+                <input id="header-input" type="text" formControlName="firstName" class="form-control" placeholder="First Name">
+                <div *ngIf="firstname.invalid && (firstname.touched || firstname.dirty)">
+                    <span class="error" *ngIf="firstname.errors?.required">First name is Required.</span>
+                    <span class="error" *ngIf="firstname.errors.pattern">*Enter only Characters.</span>
+                </div> 
+            </div>
+   
+
+            <div class="mt-2 mb-2 col-lg-6 col-6">
+                <input type="text" formControlName="lastName" class="form-control" placeholder="Last Name">
+                <div *ngIf="lastname.invalid && (lastname.touched || lastname.dirty)">
+                    <span class="error" *ngIf="lastname.errors?.required">Last name is Required.</span>
+                    <span class="error" *ngIf="lastname.errors.pattern">*Enter only Characters.</span>
+                </div> 
+            </div>
+        </div>
+
+        <div class="mt-2 mb-2 col-lg-12 col-12">
+            <input type="text" formControlName="emailId" class="form-control" placeholder="Email Id">
+            <div *ngIf="emailid.invalid && (emailid.touched || emailid.dirty)">
+                <span class="error" *ngIf="emailid.errors?.required">Email Id is Required.</span>
+                <span class="error" *ngIf="emailid.errors.email">*Enter Valid Email Address.</span>
+            </div> 
+        </div>
+
+        <div class="mt-2 mb-2 col-lg-12 col-12">
+            <input type="text" formControlName="mobileNumber" class="form-control" placeholder="Mobile Number">
+            <div *ngIf="mobilenumber.invalid && (mobilenumber.touched || mobilenumber.dirty)">
+                <span class="error" *ngIf="mobilenumber.errors?.required">Mobile Number Id is Required.</span>
+                <span class="error" *ngIf="mobilenumber.errors.pattern">*Enter Only Number</span>
+            </div>
+        </div>
+
+        <div class="col-lg-6 col-6">
+        <button class="btn" type="submit">Submit</button>    
+        </div>
+
+
+
+    </form>
+</div>
+
